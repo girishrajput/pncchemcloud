@@ -1,65 +1,140 @@
-import Image from "next/image";
+"use client";
+import React, { useState } from 'react';
+
+// --- SUB-COMPONENTS ---
+
+const Navbar = () => (
+  <nav className="fixed top-0 z-50 w-full border-b border-slate-200 bg-white/90 backdrop-blur-md">
+    <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+      <div className="text-2xl font-black tracking-tighter text-blue-900 italic">
+        PNC<span className="text-blue-600">CHEMCLOUD</span>
+      </div>
+      <div className="hidden space-x-8 lg:flex items-center text-sm font-bold text-slate-700 uppercase tracking-wide">
+        <a href="#" className="hover:text-blue-600 transition">Home</a>
+        <a href="#" className="hover:text-blue-600 transition">About</a>
+        <a href="#" className="hover:text-blue-600 transition">Capabilities</a>
+        <a href="#" className="hover:text-blue-600 transition">Products</a>
+        <a href="#" className="rounded bg-blue-900 px-6 py-2 text-white hover:bg-blue-700 transition">Contact</a>
+      </div>
+    </div>
+  </nav>
+);
+
+const Hero = () => (
+  <section className="relative flex min-h-screen items-center justify-center bg-slate-900 text-white pt-20">
+    {/* High Quality Industrial Image */}
+    <div className="absolute inset-0 z-0 opacity-50">
+      <img 
+        src="https://images.pexels.com/photos/256381/pexels-photo-256381.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+        alt="Chemical Plant" 
+        className="h-full w-full object-cover"
+      />
+    </div>
+    <div className="container relative z-10 mx-auto px-6 text-center">
+      <h1 className="mb-6 text-5xl font-extrabold leading-[1.1] md:text-8xl">
+        Innovating Chemistry <br /> 
+        <span className="text-blue-400">For A Better Tomorrow</span>
+      </h1>
+      <p className="mx-auto mb-10 max-w-2xl text-lg text-slate-200 md:text-xl">
+        A global leader in R&D and manufacturing excellence. Delivering high-performance 
+        chemical solutions to over 50 countries.
+      </p>
+      <div className="flex flex-col justify-center gap-4 sm:flex-row">
+        <button className="rounded bg-blue-600 px-10 py-4 font-bold uppercase tracking-widest hover:bg-blue-700 transition">Explore Products</button>
+        <button className="rounded border-2 border-white px-10 py-4 font-bold uppercase tracking-widest hover:bg-white hover:text-slate-900 transition">Our Vision</button>
+      </div>
+    </div>
+  </section>
+);
+
+const Capabilities = () => {
+  const caps = [
+    { title: "R&D Tech", icon: "🔬", desc: "Advanced laboratory testing and molecular engineering." },
+    { title: "Manufacturing", icon: "🏭", desc: "Mass-scale production with zero-waste protocols." },
+    { title: "Quality Control", icon: "🛡️", desc: "World-class compliance and safety certifications." }
+  ];
+  return (
+    <section className="bg-slate-50 py-24">
+      <div className="container mx-auto px-6">
+        <div className="grid gap-8 md:grid-cols-3">
+          {caps.map((item, i) => (
+            <div key={i} className="group bg-white p-12 text-center shadow-sm transition hover:shadow-2xl">
+              <div className="mb-6 text-6xl">{item.icon}</div>
+              <h3 className="mb-4 text-2xl font-bold text-blue-900">{item.title}</h3>
+              <p className="text-slate-500">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const ProductSection = () => {
+  const products = [
+    { name: "Specialty Chemicals", img: "https://images.pexels.com/photos/3735709/pexels-photo-3735709.jpeg?auto=compress&cs=tinysrgb&w=600" },
+    { name: "Agro Solutions", img: "https://images.pexels.com/photos/259280/pexels-photo-259280.jpeg?auto=compress&cs=tinysrgb&w=600" },
+    { name: "Pharma Intermediates", img: "https://images.pexels.com/photos/3951862/pexels-photo-3951862.jpeg?auto=compress&cs=tinysrgb&w=600" }
+  ];
+  return (
+    <section className="py-24">
+      <div className="container mx-auto px-6">
+        <h2 className="mb-12 text-4xl font-bold text-slate-900">Featured Products</h2>
+        <div className="grid gap-8 md:grid-cols-3">
+          {products.map((p, i) => (
+            <div key={i} className="group overflow-hidden rounded-lg border border-slate-100">
+              <div className="h-64 overflow-hidden">
+                <img src={p.img} alt={p.name} className="h-full w-full object-cover transition duration-500 group-hover:scale-110" />
+              </div>
+              <div className="p-6 bg-white">
+                <h4 className="text-xl font-bold text-blue-900">{p.name}</h4>
+                <p className="mt-2 text-sm text-slate-500 uppercase tracking-widest font-bold">In-Stock</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const Footer = () => (
+  <footer className="bg-slate-900 py-20 text-white">
+    <div className="container mx-auto px-6 grid md:grid-cols-4 gap-12 border-b border-slate-800 pb-12">
+      <div className="col-span-2">
+        <div className="mb-6 text-3xl font-black italic">PNCCHEMCLOUD</div>
+        <p className="max-w-sm text-slate-400">Leading the world in high-purity chemical manufacturing and scientific innovation.</p>
+      </div>
+      <div>
+        <h5 className="mb-6 font-bold uppercase tracking-widest text-blue-400">Company</h5>
+        <ul className="space-y-4 text-slate-400 text-sm">
+          <li><a href="#" className="hover:text-white">Our Story</a></li>
+          <li><a href="#" className="hover:text-white">Careers</a></li>
+          <li><a href="#" className="hover:text-white">Sustainability</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 className="mb-6 font-bold uppercase tracking-widest text-blue-400">Contact</h5>
+        <p className="text-slate-400 text-sm">Industrial Hub, Tower A</p>
+        <p className="text-slate-400 text-sm mt-2">info@pncchemcloud.com</p>
+      </div>
+    </div>
+    <div className="mt-12 text-center text-xs text-slate-500">
+      &copy; 2026 PNCChemCloud. All rights reserved. Professional Chemical Solutions.
+    </div>
+  </footer>
+);
+
+// --- ASSEMBLY ---
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <main className="min-h-screen">
+      <Navbar />
+      <Hero />
+      <Capabilities />
+      <ProductSection />
+      <Footer />
+    </main>
   );
 }
