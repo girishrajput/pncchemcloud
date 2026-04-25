@@ -99,30 +99,7 @@ const ProductSection = () => {
 };
 
 const Footer = () => (
-  // <footer className="bg-slate-900 py-20 text-white">
-  //   <div className="container mx-auto px-6 grid md:grid-cols-4 gap-12 border-b border-slate-800 pb-12">
-  //     <div className="col-span-2">
-  //       <div className="mb-6 text-3xl font-black italic">P&C CHEMCLOUD</div>
-  //       <p className="max-w-sm text-slate-400">Leading the world in high-purity chemical manufacturing and scientific innovation.</p>
-  //     </div>
-  //     <div>
-  //       <h5 className="mb-6 font-bold uppercase tracking-widest text-blue-400">Company</h5>
-  //       <ul className="space-y-4 text-slate-400 text-sm">
-  //         <li><a href="#" className="hover:text-white">Our Story</a></li>
-  //         <li><a href="#" className="hover:text-white">Careers</a></li>
-  //         <li><a href="#" className="hover:text-white">Sustainability</a></li>
-  //       </ul>
-  //     </div>
-  //     <div>
-  //       <h5 className="mb-6 font-bold uppercase tracking-widest text-blue-400">Contact</h5>
-  //       <p className="text-slate-400 text-sm">Industrial Hub, Tower A</p>
-  //       <p className="text-slate-400 text-sm mt-2">info@P&C chemcloud.com</p>
-  //     </div>
-  //   </div>
-  //   <div className="mt-12 text-center text-xs text-slate-500">
-  //     &copy; 2026 P&C ChemCloud. All rights reserved. Professional Chemical Solutions.
-  //   </div>
-  // </footer>
+  
 
   <footer className="bg-slate-900 pt-16 text-slate-300">
       <div className="mx-auto max-w-7xl px-6 pb-8 grid gap-12 md:grid-cols-4">
