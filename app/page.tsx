@@ -1,5 +1,6 @@
 "use client";
-import React, { useState } from 'react';
+import React from 'react';
+import Image from 'next/image';
 
 // --- SUB-COMPONENTS ---
 
@@ -24,10 +25,12 @@ const Hero = () => (
   <section className="relative flex min-h-screen items-center justify-center bg-slate-900 text-white pt-20">
     {/* High Quality Industrial Image */}
     <div className="absolute inset-0 z-0 opacity-50">
-      <img 
+      <Image 
         src="https://images.pexels.com/photos/256381/pexels-photo-256381.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
         alt="Chemical Plant" 
-        className="h-full w-full object-cover"
+        fill
+        className="object-cover"
+        unoptimized
       />
     </div>
     <div className="container relative z-10 mx-auto px-6 text-center">
@@ -83,8 +86,14 @@ const ProductSection = () => {
         <div className="grid gap-8 md:grid-cols-3">
           {products.map((p, i) => (
             <div key={i} className="group overflow-hidden rounded-lg border border-slate-100">
-              <div className="h-64 overflow-hidden">
-                <img src={p.img} alt={p.name} className="h-full w-full object-cover transition duration-500 group-hover:scale-110" />
+              <div className="relative h-64 overflow-hidden">
+                <Image 
+                  src={p.img} 
+                  alt={p.name} 
+                  fill
+                  className="object-cover transition duration-500 group-hover:scale-110" 
+                  unoptimized
+                />
               </div>
               <div className="p-6 bg-white">
                 <h4 className="text-xl font-bold text-blue-900">{p.name}</h4>
