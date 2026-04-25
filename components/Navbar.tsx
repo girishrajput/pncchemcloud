@@ -7,7 +7,7 @@ const Navbar = () => {
     <nav className="sticky top-0 z-50 w-full border-b border-gray-100 bg-white/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <div className="text-2xl font-bold tracking-tighter text-blue-900">
-          PNC<span className="text-blue-600">ChemCloud</span>
+          P&C <span className="text-blue-600">ChemCloud</span>
         </div>
         
         <div className="hidden space-x-8 lg:flex">

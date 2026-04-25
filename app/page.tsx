@@ -7,7 +7,7 @@ const Navbar = () => (
   <nav className="fixed top-0 z-50 w-full border-b border-slate-200 bg-white/90 backdrop-blur-md">
     <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
       <div className="text-2xl font-black tracking-tighter text-blue-900 italic">
-        PNC<span className="text-blue-600">CHEMCLOUD</span>
+        P&C <span className="text-blue-600">CHEMCLOUD</span>
       </div>
       <div className="hidden space-x-8 lg:flex items-center text-sm font-bold text-slate-700 uppercase tracking-wide">
         <a href="#" className="hover:text-blue-600 transition">Home</a>
@@ -99,30 +99,67 @@ const ProductSection = () => {
 };
 
 const Footer = () => (
-  <footer className="bg-slate-900 py-20 text-white">
-    <div className="container mx-auto px-6 grid md:grid-cols-4 gap-12 border-b border-slate-800 pb-12">
-      <div className="col-span-2">
-        <div className="mb-6 text-3xl font-black italic">PNCCHEMCLOUD</div>
-        <p className="max-w-sm text-slate-400">Leading the world in high-purity chemical manufacturing and scientific innovation.</p>
+  // <footer className="bg-slate-900 py-20 text-white">
+  //   <div className="container mx-auto px-6 grid md:grid-cols-4 gap-12 border-b border-slate-800 pb-12">
+  //     <div className="col-span-2">
+  //       <div className="mb-6 text-3xl font-black italic">P&C CHEMCLOUD</div>
+  //       <p className="max-w-sm text-slate-400">Leading the world in high-purity chemical manufacturing and scientific innovation.</p>
+  //     </div>
+  //     <div>
+  //       <h5 className="mb-6 font-bold uppercase tracking-widest text-blue-400">Company</h5>
+  //       <ul className="space-y-4 text-slate-400 text-sm">
+  //         <li><a href="#" className="hover:text-white">Our Story</a></li>
+  //         <li><a href="#" className="hover:text-white">Careers</a></li>
+  //         <li><a href="#" className="hover:text-white">Sustainability</a></li>
+  //       </ul>
+  //     </div>
+  //     <div>
+  //       <h5 className="mb-6 font-bold uppercase tracking-widest text-blue-400">Contact</h5>
+  //       <p className="text-slate-400 text-sm">Industrial Hub, Tower A</p>
+  //       <p className="text-slate-400 text-sm mt-2">info@P&C chemcloud.com</p>
+  //     </div>
+  //   </div>
+  //   <div className="mt-12 text-center text-xs text-slate-500">
+  //     &copy; 2026 P&C ChemCloud. All rights reserved. Professional Chemical Solutions.
+  //   </div>
+  // </footer>
+
+  <footer className="bg-slate-900 pt-16 text-slate-300">
+      <div className="mx-auto max-w-7xl px-6 pb-8 grid gap-12 md:grid-cols-4">
+        <div className="col-span-1 md:col-span-1">
+          <h3 className="mb-6 text-3xl font-black text-white text-uppercase">P&C CHEMCLOUD</h3>
+          <p className="text-sm leading-relaxed text-slate-400">
+            A global leader in specialty chemicals, driving innovation through R&D and 
+            sustainable manufacturing practices.
+          </p>
+        </div>
+        <div>
+          <h4 className="mb-6 font-bold uppercase tracking-widest text-blue-400">Quick Links</h4>
+          <ul className="space-y-2 text-sm">
+            <li className="hover:text-blue-400 cursor-pointer  text-slate-400">Sitemap</li>
+            <li className="hover:text-blue-400 text-slate-400 cursor-pointer">Careers</li>
+            <li className="hover:text-blue-400 cursor-pointer  text-slate-400">Sustainability</li>
+          </ul>
+        </div>
+        <div>
+          <h4 className="mb-6 font-bold uppercase tracking-widest text-blue-400">Policies</h4>
+          <ul className="space-y-2 text-sm">
+            <li className="hover:text-blue-400 text-slate-400 cursor-pointer">Privacy Policy</li>
+            <li className="hover:text-blue-400 text-slate-400 cursor-pointer">Terms of Service</li>
+            <li className="hover:text-blue-400 text-slate-400 cursor-pointer">Payment Terms</li>
+          </ul>
+        </div>
+        <div>
+          <h4 className="mb-6 font-bold uppercase tracking-widest text-blue-400">Contact Info</h4>
+          <p className="text-sm text-slate-400"><strong className='text-slate-300'>Address:</strong> SF No. 66/8, MBT Road, Eranthangal Village,Vellore - 632519, Tamil Nadu, India</p>
+          <p className="text-sm text-slate-400"><strong className='text-slate-300'>Email:</strong> contact@pncchemcloud.com</p>
+          <p className="text-sm text-slate-400"><strong className='text-slate-300'>Phone:</strong> 07971670468</p>
+        </div>
       </div>
-      <div>
-        <h5 className="mb-6 font-bold uppercase tracking-widest text-blue-400">Company</h5>
-        <ul className="space-y-4 text-slate-400 text-sm">
-          <li><a href="#" className="hover:text-white">Our Story</a></li>
-          <li><a href="#" className="hover:text-white">Careers</a></li>
-          <li><a href="#" className="hover:text-white">Sustainability</a></li>
-        </ul>
+      <div className="border-t border-slate-800 py-6 text-center text-xs text-slate-400">
+        © {new Date().getFullYear()} P&C ChemCloud. All Rights Reserved.
       </div>
-      <div>
-        <h5 className="mb-6 font-bold uppercase tracking-widest text-blue-400">Contact</h5>
-        <p className="text-slate-400 text-sm">Industrial Hub, Tower A</p>
-        <p className="text-slate-400 text-sm mt-2">info@pncchemcloud.com</p>
-      </div>
-    </div>
-    <div className="mt-12 text-center text-xs text-slate-500">
-      &copy; 2026 PNCChemCloud. All rights reserved. Professional Chemical Solutions.
-    </div>
-  </footer>
+    </footer>
 );
 
 // --- ASSEMBLY ---

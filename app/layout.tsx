@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "PNCChemCloud | Innovating Chemistry",
+  title: "P&C ChemCloud | Innovating Chemistry",
   description: "Global chemical solutions and industrial excellence.",
 };
 

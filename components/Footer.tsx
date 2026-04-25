@@ -3,7 +3,7 @@ const Footer = () => {
     <footer className="bg-slate-900 pt-16 text-slate-300">
       <div className="mx-auto max-w-7xl px-6 pb-8 grid gap-12 md:grid-cols-4">
         <div className="col-span-1 md:col-span-1">
-          <h3 className="text-xl font-bold text-white mb-4">PNCChemCloud</h3>
+          <h3 className="text-xl font-bold text-white mb-4">P&C ChemCloud</h3>
           <p className="text-sm leading-relaxed">
             A global leader in specialty chemicals, driving innovation through R&D and 
             sustainable manufacturing practices.
@@ -28,12 +28,12 @@ const Footer = () => {
         <div>
           <h4 className="font-bold text-white mb-4">Contact Info</h4>
           <p className="text-sm">123 Industrial Hub, Tech City</p>
-          <p className="text-sm">Email: contact@pncchemcloud.com</p>
+          <p className="text-sm">Email: contact@P&C chemcloud.com</p>
           <p className="text-sm">Phone: +1 (555) 000-CHEM</p>
         </div>
       </div>
       <div className="border-t border-slate-800 py-6 text-center text-xs">
-        © {new Date().getFullYear()} PNCChemCloud. All Rights Reserved.
+        © {new Date().getFullYear()} P&C ChemCloud. All Rights Reserved.
       </div>
     </footer>
   );
